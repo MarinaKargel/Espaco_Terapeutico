@@ -65,16 +65,14 @@ body {
 }
 
 #sobre {
-    margin-left: 150px; 
-    margin-right: 150px;
     text-align: justify;
+}
+
+#sobre, #terapias {
+    margin-left: 40px; 
+    margin-right: 40px;
 }
 
 #sobre-img {
     border-radius: 5%;
-}
-
-#terapias {
-    margin-left: 40px; 
-    margin-right: 40px;
 }
