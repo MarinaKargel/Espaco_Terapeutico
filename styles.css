@@ -1,9 +1,57 @@
+* {
+    font-family: Roboto; 
+}
+
 body {
     background-color: #c5a8db !important;
 }
 
-#header {
+#btn-back-to-top {
+    background-color: #9e71c0 !important;
+    border-radius: 20%;
+    bottom: 20px;
+    color: #ffffff;
+    display: none;
+    position: fixed;
+    right: 20px;
+    z-index: 2;
+}
+
+#card-contato, .d-block {
+    border-radius: 15px;
+}
+
+#card-contato {
+    background-color: #c5e0c4;
+}
+
+.card-title, #copyright {
+    margin-top: 20px;
+}
+
+.card-text, .card-title, .nav-link, #sobre-terapias, #sobre-title {
+    color: #8d61ae;
+}
+
+.carousel {
+    margin-top: 50px;
+}
+
+#copyright {
+    font-size: 10px;
+}
+
+#copyright, #header, #instagram, #sobre-terapias, #sobre-title {
     text-align: center;
+}
+
+#contato, #sobre, #terapias {
+    margin-top: 200px;
+}
+
+#instagram-icon {
+    height: 50px;
+    width: 50px; 
 }
 
 #logo {
@@ -16,52 +64,17 @@ body {
     margin-top: 100px;
 }
 
-.nav-link {
-    color: #8d61ae;
-}
-
-#sobre-img {
-    border-radius: 5%;
-    max-width: 100%;
-    height: 100%;
-}
-
 #sobre {
-    margin-top: 200px;
     margin-left: 150px; 
     margin-right: 150px;
     text-align: justify;
 }
 
-#sobre-title {
-    margin-bottom: 50px;
-    text-align: center;
-    color: #8d61ae;
-}
-
-.card-text {
-    color: #724893;
+#sobre-img {
+    border-radius: 5%;
 }
 
 #terapias {
-    margin-top: 200px;
     margin-left: 40px; 
     margin-right: 40px;
-}
-
-#sobre-terapias {
-    margin-bottom: 50px;
-    text-align: center;
-    color: #8d61ae;
-}
-
-#btn-back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-    border-radius: 20%;
-    z-index: 2;
-    color: #ffffff;
-    background-color: #583970 !important;
 }
