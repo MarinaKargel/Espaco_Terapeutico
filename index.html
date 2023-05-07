@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Importação das bibliotecas-->
     <link rel="icon" href="assets/favicon.png">
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,34 +17,42 @@
     <title>Espaço Terapêutico - Portilla Terapeuta</title>
   </head>
   <body>
+    <!--Implementação em javascript do botão que direciona o usuário a topo da tela-->
     <div>
       <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
         <i class="fa fa-chevron-up" aria-hidden="true"></i>
       </button>
       <script>
+        //Método que pega o elemento pelo id
         let mybutton = document.getElementById("btn-back-to-top");
   
+        //Método para o aparecimento do botão baseado na rolagem da página
         window.onscroll = function() {
           scrollFunction()
         };
   
+        //Função que controla o aparecimento do botão
         function scrollFunction() {
           (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) 
           ?  mybutton.style.display = "block" 
           : mybutton.style.display = "none";
         }
   
+        //Método que espera o evento de click do usuário para acionar a função para direcionar o usuário ao topo da página
         mybutton.addEventListener("click", backToTop);
   
+        //Função que direciona o usuário ao topo da página
         function backToTop() {
           document.body.scrollTop = 0;
           document.documentElement.scrollTop = 0;
         }
       </script>
+      <!--Implementação da parte inicial da tela, ou seja, do topo da página-->
       <div id="initial">
         <div class="col-12">
           <img id="logo" src="assets/logo.jpg">
         </div>
+        <!--Utilizei o component de nav-group do bootstrap pra criar os itens de navegação da página-->
         <ul id="nav-group" class="nav justify-content-center">
           <li class="nav-item">
             <a href="#sobre" class="nav-link"><h5>SOBRE</h5></a>
@@ -56,7 +65,9 @@
           </li>
         </ul>
       </div>
+      <!--Implementação da sessão sobre da tela-->
       <div id="sobre">
+        <!--Utilizei o componente de card do bootstrap e as divs para deixar os elementos lado a lado no card-->
           <div class="row">
             <div class="col-md-4">
               <img id="sobre-img" src="assets/sobre.jpg" class="img-fluid sobre-logo">
@@ -69,6 +80,7 @@
                   mesmos, ficamos mais dispostos e confiantes, isso porque nossa autoestima traz satisfação pessoal. 
                   Aqui sabemos que cada pessoa é diferente e enfrenta seus desafios diários, assim ajudamos você a encontrar o seu 
                   equilíbrio de forma única para melhorar seu dia-a-dia. 
+                  <!--Utilizei a tag strong para ressaltar a frase de efeito da cliente-->
                   <br><strong>A vida é muito curta para não se priorizar.</strong>
                   <br>Reserve já o seu horário e permita que o Portilla Espaço Terapêutico mostre uma outra perspectiva.
                 </p>
@@ -76,10 +88,13 @@
             </div>
           </div>
       </div>
+      <!--Implementação da sessão de terapias, utilizei aqui o componente de carousel do bootstrap-->
       <div id="terapias">
         <h5 id="sobre-terapias">TERAPIAS</h5>
         <div class="row">
+          <!--Implementação o carousel em slides lado a lado e tirei a propriedade de que as imagens fossem trocadas automaticamente-->
           <div id="carousel-cone" class="carousel slide col-md-4" data-interval="false">
+            <!--Parte inferior do carousel, aonde fica os indicadores de cada página-->
             <ol class="carousel-indicators">
               <li data-target="#carousel-cone" data-slide-to="0" class="active"></li>
               <li data-target="#carousel-cone" data-slide-to="1"></li>
@@ -87,6 +102,7 @@
               <li data-target="#carousel-cone" data-slide-to="3"></li>
               <li data-target="#carousel-cone" data-slide-to="4"></li>
             </ol>
+            <!--Parte onde coloquei a ordem das imagens do carousel-->
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="assets/terapia-cone-1.jpeg" class="d-block w-100">
@@ -104,6 +120,7 @@
                 <img src="assets/terapia-cone-5.jpeg" class="d-block w-100">
               </div>
             </div>
+            <!--Parte das setas laterais do carousel e que controlam sua passagem manual-->
             <a class="carousel-control-prev" href="#carousel-cone" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
@@ -113,6 +130,7 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
+          <!--Implementação do segundo carousel ao lado do primeiro, implementação é semelhante ao primeiro-->
           <div id="carousel-shiatsu" class="carousel slide col-md-4" data-interval="false">
             <ol class="carousel-indicators">
               <li data-target="#carousel-shiatsu" data-slide-to="0" class="active"></li>
@@ -151,6 +169,7 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
+          <!--Implementação do terceiro carousel ao lado do segundo, implementação é semelhante aos outros dois-->
           <div id="carousel-massagem" class="carousel slide col-md-4" data-interval="false">
             <ol class="carousel-indicators">
               <li data-target="#carousel-massagem" data-slide-to="0" class="active"></li>
@@ -190,24 +209,29 @@
             </a>
           </div>
         </div>
+      <!--Implementação da sessão de contatos-->
       <div id="contato">
+        <!--Utilizei o componente de card do boostrap-->
         <div id="card-contato" class="card-body">
           <div class="row">
             <div class="col-md-10">
+              <!--Parte dos contatos-->
               <h5 class="card-title">CONTATOS</h5>
               <p class="card-text">Endereço: Avenida Osmar Cunha, 183, Ceisa Center, Bloco B</p>
               <p class="card-text">Telefone/WhatsApp: (48) 99140-0665</p>
             </div>
+            <!--Parte do instagram onde coloquei uma imagem que ao clicado é direcionado a uma nova aba do link referenciado-->
             <div id="instagram" class="col-md-2">
-                <h5 class="card-title">Siga-nos no Instagram</h5>
-                <a href="https://www.instagram.com/portillaterapeuta/?igshid=NTc4MTIwNjQ2YQ%3D%3D" target="_blank">
-                  <img id="instagram-icon" src="assets/instagram-icon.png"/>
-                </a>
-              </div>
+              <h5 class="card-title">Siga-nos no Instagram</h5>
+              <a href="https://www.instagram.com/portillaterapeuta/?igshid=NTc4MTIwNjQ2YQ%3D%3D" target="_blank">
+                <img id="instagram-icon" src="assets/instagram-icon.png"/>
+              </a>
+            </div>
             </div>
           </div>
         </div>
       </div>
+      <!--Implementação do copyright no fim da página-->
       <div id="copyright">
         <p>copyright - 2023, Marina Guenter Kargel - Todos os direitos reservados</p>
       </div>
